@@ -3,9 +3,11 @@ import { getApplicationDetails } from "../services/applicationServices";
 import {ApplicationResponse} from '../interfaces/applicationData'
 import { ApplicationCard } from "../Components/ApplicationCard";
 import { Grid,Segment,Loader,Dimmer} from 'semantic-ui-react'
+import { useLocation } from 'react-router-dom';
 
 export const Application=()=>{
-    const pathArray = window.location.pathname.split('/');
+  let location = useLocation();
+    const pathArray = location.pathname.split('/');
     const applicationName = pathArray[pathArray.length - 1];
     const [applicationData, setApplicationData] =useState<ApplicationResponse[] | []>([])
     useEffect(()=>{

@@ -3,9 +3,11 @@ import { getResourceDetails } from "../services/resourceServices";
 import {ResourceResponse} from '../interfaces/resourceData'
 import { ApplicationCard } from "../Components/ApplicationCard";
 import { Grid,  } from 'semantic-ui-react'
+import { useLocation } from 'react-router-dom';
 
 export const Resource=()=>{
-    const pathArray = window.location.pathname.split('/');
+    let location = useLocation();
+    const pathArray = location.pathname.split('/');
     const resourceName = pathArray[pathArray.length - 1];
     const [resourceData, setResourceData] =useState<ResourceResponse[] | []>([])
     useEffect(()=>{
