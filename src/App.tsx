@@ -28,7 +28,7 @@ function App() {
            <Route path="/application/:applicationId" element={<Application/>}/>
            <Route path="/resource" element={<Resources/>}/>
            <Route path="/resource/:resourceId" element={<Resource/>}/>
-           <Route path="*" element={<PageNotFound/>}/>
+           {/* <Route path="*" element={<PageNotFound/>}/> */}
         </Routes>
       </BrowserRouter>
   </Container>
