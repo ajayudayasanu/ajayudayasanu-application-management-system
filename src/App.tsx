@@ -1,7 +1,7 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { Container } from 'semantic-ui-react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Header } from './Components/Header';
 import { Home } from './Routes/Home';
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <Header/>
      <Container>
-     <BrowserRouter>
+     <HashRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>
 
@@ -30,7 +30,7 @@ function App() {
            <Route path="/resource/:resourceId" element={<Resource/>}/>
            {/* <Route path="*" element={<PageNotFound/>}/> */}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
   </Container>
     </div>
   );
