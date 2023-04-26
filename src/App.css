@@ -1,3 +1,24 @@
+.homeCards{
+  /* display: flex; */
+  justify-content: baseline;
+  align-items: center;
+  margin-top: 3rem;
+}
+.ui.mini.inverted.attached.segment{
+margin-bottom: 40px;
+}
+.heading{
+  display: block;
+  color: #282c34;
+}
+.main-cards{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.cards-main{
+  margin: 20px;
+}
 .App {
   text-align: center;
 }
